@@ -40,4 +40,54 @@ class RecipeMaster_ProjectUITests: XCTestCase {
             }
         }
     }
+    
+    func testInterface() {
+                        
+        let app = XCUIApplication()
+        let textfield = app.textFields["Search for Recipes"]
+        let findButton = app.buttons["Find Recipes"]
+        let browseButton = app.buttons["Browse Recipes"]
+
+        if textfield.isSelected {
+            
+            XCTAssertTrue(textfield.exists)
+            XCTAssertTrue(findButton.exists)
+            XCTAssertTrue(browseButton.exists)
+            
+        }
+        if findButton.isSelected {
+            
+            XCTAssertTrue(textfield.exists)
+            XCTAssertTrue(findButton.exists)
+            XCTAssertTrue(browseButton.exists)
+            
+        }
+        if browseButton.isSelected {
+            
+            XCTAssertTrue(textfield.exists)
+            XCTAssertTrue(findButton.exists)
+            XCTAssertTrue(browseButton.exists)
+            
+        }
+        
+        
+        
+        
+    }
+    
+    func testTextField() {
+        
+        let app = XCUIApplication()
+            app.launch()
+
+        let searchTextField = app.textFields["Search for Recipes"]
+        let name = "Something else"
+        searchTextField.tap()
+        searchTextField.typeText("Something")
+        XCTAssertEqual(searchTextField.value as? String, name)
+        
+    }
+    
 }
+
+

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		966E8DCD25C81B0A00607066 /* TextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E8DCC25C81B0A00607066 /* TextDelegate.swift */; };
+		967C0C6D25C1854C000A37F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C0C6C25C1854C000A37F3 /* HomeView.swift */; };
 		96E3E7B125BAE70B0033E66B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E3E7B025BAE70B0033E66B /* AppDelegate.swift */; };
 		96E3E7B325BAE70B0033E66B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E3E7B225BAE70B0033E66B /* SceneDelegate.swift */; };
 		96E3E7B525BAE70B0033E66B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E3E7B425BAE70B0033E66B /* ViewController.swift */; };
@@ -16,6 +18,9 @@
 		96E3E7C025BAE70C0033E66B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E3E7BE25BAE70C0033E66B /* LaunchScreen.storyboard */; };
 		96E3E7CB25BAE70C0033E66B /* RecipeMaster_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E3E7CA25BAE70C0033E66B /* RecipeMaster_ProjectTests.swift */; };
 		96E3E7D625BAE70C0033E66B /* RecipeMaster_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E3E7D525BAE70C0033E66B /* RecipeMaster_ProjectUITests.swift */; };
+		96E9809C25CD5B7900CA5ED2 /* GoogleSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9809B25CD5B7900CA5ED2 /* GoogleSearchService.swift */; };
+		96E9809E25CD5DA800CA5ED2 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9809D25CD5DA800CA5ED2 /* SearchModel.swift */; };
+		96E980A025CD683A00CA5ED2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9809F25CD683A00CA5ED2 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		966E8DCC25C81B0A00607066 /* TextDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDelegate.swift; sourceTree = "<group>"; };
+		967C0C6C25C1854C000A37F3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		96E3E7AD25BAE70B0033E66B /* RecipeMaster_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeMaster_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E3E7B025BAE70B0033E66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E3E7B225BAE70B0033E66B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +58,9 @@
 		96E3E7D125BAE70C0033E66B /* RecipeMaster_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeMaster_ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E3E7D525BAE70C0033E66B /* RecipeMaster_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMaster_ProjectUITests.swift; sourceTree = "<group>"; };
 		96E3E7D725BAE70C0033E66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96E9809B25CD5B7900CA5ED2 /* GoogleSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSearchService.swift; sourceTree = "<group>"; };
+		96E9809D25CD5DA800CA5ED2 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		96E9809F25CD683A00CA5ED2 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +113,11 @@
 			children = (
 				96E3E7B025BAE70B0033E66B /* AppDelegate.swift */,
 				96E3E7B225BAE70B0033E66B /* SceneDelegate.swift */,
-				96E3E7B425BAE70B0033E66B /* ViewController.swift */,
+				96E967C625C2DD3B00DCC91D /* Models */,
+				96E967C825C2DD4700DCC91D /* Services */,
+				96E967C725C2DD4100DCC91D /* ViewModels */,
+				96E967C525C2DD3400DCC91D /* Controllers */,
+				96E967C425C2DD2D00DCC91D /* Views */,
 				96E3E7B625BAE70B0033E66B /* Main.storyboard */,
 				96E3E7BC25BAE70C0033E66B /* Assets.xcassets */,
 				96E3E7BE25BAE70C0033E66B /* LaunchScreen.storyboard */,
@@ -129,6 +143,47 @@
 				96E3E7D725BAE70C0033E66B /* Info.plist */,
 			);
 			path = RecipeMaster_ProjectUITests;
+			sourceTree = "<group>";
+		};
+		96E967C425C2DD2D00DCC91D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				967C0C6C25C1854C000A37F3 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96E967C525C2DD3400DCC91D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96E3E7B425BAE70B0033E66B /* ViewController.swift */,
+				966E8DCC25C81B0A00607066 /* TextDelegate.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96E967C625C2DD3B00DCC91D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96E9809D25CD5DA800CA5ED2 /* SearchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96E967C725C2DD4100DCC91D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				96E9809F25CD683A00CA5ED2 /* SearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		96E967C825C2DD4700DCC91D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				96E9809B25CD5B7900CA5ED2 /* GoogleSearchService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +320,11 @@
 				96E3E7B525BAE70B0033E66B /* ViewController.swift in Sources */,
 				96E3E7BB25BAE70B0033E66B /* RecipeMaster_Project.xcdatamodeld in Sources */,
 				96E3E7B125BAE70B0033E66B /* AppDelegate.swift in Sources */,
+				96E9809E25CD5DA800CA5ED2 /* SearchModel.swift in Sources */,
+				966E8DCD25C81B0A00607066 /* TextDelegate.swift in Sources */,
+				96E9809C25CD5B7900CA5ED2 /* GoogleSearchService.swift in Sources */,
+				96E980A025CD683A00CA5ED2 /* SearchViewModel.swift in Sources */,
+				967C0C6D25C1854C000A37F3 /* HomeView.swift in Sources */,
 				96E3E7B325BAE70B0033E66B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
