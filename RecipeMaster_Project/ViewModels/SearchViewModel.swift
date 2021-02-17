@@ -12,16 +12,6 @@ import Foundation
 class SearchViewModel {
     
     
-    
-    
-    func startSearchContent(search: String) {
-        
-        
-        let searchService = GoogleSearchService()
-        
-        searchService.getData(search: search)
-        
-        
-    }
+
     
 }

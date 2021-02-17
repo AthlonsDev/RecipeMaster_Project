@@ -52,7 +52,7 @@ class RecipeMaster_ProjectTests: XCTestCase {
     
     func testNetwork() {
         
-        let url = URL(string: "https://cse.google.com/cse?cx=008687677900679795553:gdyofjylvae")
+        let url = URL(string: "https://cse.google.com/cse?cx=008687677900679795553:hczrenkms9f")
 //        Expectation to meet
         let premise = expectation(description: "Completion handler invoked")
         var statusCode: Int?

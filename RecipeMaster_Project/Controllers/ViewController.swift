@@ -9,11 +9,12 @@
 import UIKit
 
 let searchNotification = "com.project.search"
+let searchNotificationName = Notification.Name(searchNotification)
 
 class ViewController: UIViewController {
     
     
-    let searchNotificationName = Notification.Name(searchNotification)
+
       
       deinit {
           NotificationCenter.default.removeObserver(self)
@@ -53,11 +54,14 @@ class ViewController: UIViewController {
         
 //        Go to the recipee catalog
         
+        performSegue(withIdentifier: "goToResults", sender: self)
+        
     }
     
     @objc func processSearchTerms(notification: NSNotification) {
             
         searchTerm = notification.object as! String
+        
         
             
     }
@@ -65,11 +69,14 @@ class ViewController: UIViewController {
     @objc func findRecipes() {
         
 //        Go to search result using searchTerm
-        let viewModel = SearchViewModel()
+//        let viewModel = SearchViewModel()
+//        
+//        viewModel.startSearchContent(search: searchTerm)
         
-        viewModel.startSearchContent(search: searchTerm)
+        performSegue(withIdentifier: "goToResults", sender: self)
                 
     }
+    
     
 
 }

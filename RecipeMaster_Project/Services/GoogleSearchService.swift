@@ -12,15 +12,13 @@ import Foundation
 class GoogleSearchService: NSObject {
     
     
-    func getData(search: String) {
+    func getData(search: String, completion: @escaping ([items]?, Bool) -> ()) {
         
         
-        let apiKey = "AIzaSyDKVx50u_FxYRGS0xH4ujM_fEGq9cG12mw"
+        let apiKey = "AIzaSyAeuI82j0jiiqxnaFy50Nw9h8PBhgRKkRM"
         let bundleId = "AndreaSanna.RecipeMaster-Project"
-        let searchEngineId = "008687677900679795553:gdyofjylvae"
-        let serverAddress = String(format: "https://www.googleapis.com/customsearch/v1?q=%@&cx=%@&key=%@",search ,searchEngineId, apiKey)
-
-            print(search)
+        let searchEngineId = "b1bd162924030a980"
+        let serverAddress = String(format: "https://cse.google.com/cse?cx=b1bd162924030a980",search ,searchEngineId, apiKey)
 
         guard serverAddress.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) != nil else {return}
         //        guard let url = URL(string: urlString) else {return}
@@ -38,25 +36,20 @@ class GoogleSearchService: NSObject {
         guard let data = data else {return}
 
         let dataAsString = String(describing: data)
-                    
+ 
 
-            do{
-
-            let jsonData = try JSONDecoder().decode(websiteDescription.self, from: data)
-             
+             do {
+                let data = try JSONDecoder().decode(websiteDescription.self, from: data)
                 
-//            Get back to Main Thread
-                DispatchQueue.main.async {
-                    
-//                    Protocol to pass to dataModel
-                    
+                let dataItems = data.items
+                
+                    DispatchQueue.main.async {
+                        completion(dataItems, true)
+                    }
+                } catch let jsonErr {
+                        print("Failed to decode:", jsonErr)
                 }
-                
-            }  catch let error as NSError {
-                print(error)
-            }
-        }
-        datatask.resume()
+            }.resume()
     }
     
 }
