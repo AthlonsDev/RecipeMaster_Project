@@ -59,10 +59,23 @@ class TableViewController: UITableViewController {
         
         cell.textLabel?.text = dataIndex.title
         
-        cell.detailTextLabel?.text = dataIndex.title
+        cell.detailTextLabel?.text = dataIndex.name
+        
+        cell.imageView?.image = dataIndex.processImages(imageString: dataIndex.image)
         
         return cell
         
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let index = tableView.cellForRow(at: indexPath)
+        
+        guard let title = index?.textLabel else {return}
+        
+//        Proceed to DetailViewController
+        
+    }
+    
     
 }

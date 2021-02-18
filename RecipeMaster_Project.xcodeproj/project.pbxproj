@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9612F62025D548F900EA6D73 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612F61F25D548F900EA6D73 /* TableViewController.swift */; };
+		961FC21E25DE8A14009CF946 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961FC21D25DE8A14009CF946 /* ImageProcessor.swift */; };
 		964C6DB525DD67B600142175 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C6DB425DD67B600142175 /* TableViewModel.swift */; };
 		966E8DCD25C81B0A00607066 /* TextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E8DCC25C81B0A00607066 /* TextDelegate.swift */; };
 		967C0C6D25C1854C000A37F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C0C6C25C1854C000A37F3 /* HomeView.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		9612F61F25D548F900EA6D73 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		961FC21D25DE8A14009CF946 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		964C6DB425DD67B600142175 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		966E8DCC25C81B0A00607066 /* TextDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDelegate.swift; sourceTree = "<group>"; };
 		967C0C6C25C1854C000A37F3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				96E3E7B425BAE70B0033E66B /* ViewController.swift */,
 				966E8DCC25C81B0A00607066 /* TextDelegate.swift */,
 				9612F61F25D548F900EA6D73 /* TableViewController.swift */,
+				961FC21D25DE8A14009CF946 /* ImageProcessor.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				96E9809C25CD5B7900CA5ED2 /* GoogleSearchService.swift in Sources */,
 				96E980A025CD683A00CA5ED2 /* SearchViewModel.swift in Sources */,
 				967C0C6D25C1854C000A37F3 /* HomeView.swift in Sources */,
+				961FC21E25DE8A14009CF946 /* ImageProcessor.swift in Sources */,
 				96E3E7B325BAE70B0033E66B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

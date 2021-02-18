@@ -15,10 +15,10 @@ class GoogleSearchService: NSObject {
     func getData(search: String, completion: @escaping ([items]?, Bool) -> ()) {
         
         
-        let apiKey = "AIzaSyAeuI82j0jiiqxnaFy50Nw9h8PBhgRKkRM"
+        let apiKey = "GoogleAPI Key"
         let bundleId = "AndreaSanna.RecipeMaster-Project"
-        let searchEngineId = "b1bd162924030a980"
-        let serverAddress = String(format: "https://cse.google.com/cse?cx=b1bd162924030a980",search ,searchEngineId, apiKey)
+        let searchEngineId = "SearchID Google"
+        let serverAddress = String(format: "https://cse.google.com/...",search ,searchEngineId, apiKey)
 
         guard serverAddress.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) != nil else {return}
         //        guard let url = URL(string: urlString) else {return}
